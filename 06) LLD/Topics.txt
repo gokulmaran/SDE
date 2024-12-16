@@ -1,0 +1,229 @@
+LLD Topics-->(OOPS Coding)(L&T technology)
+-------------
+
+1) OOPS Concept
+2) Design Patterns
+3) UML Diagram
+4) SOLID Principles
+===========================
+Link: https://youtu.be/rliSgjoOFTs?t=0&si=Pxc6PT0n23spPxsH
+
+Playlist-Concept and Coding: https://youtube.com/playlist?list=PL6W8uoQQ2c61X_9e6Net0WdYZidm7zooW&si=SRrVNbNspI4uF6zI
+
+link neetcode: https://neetcode.io/courses/design-patterns/1
+
+link neetcode practice ques: https://neetcode.io/courses/ood-interview/0
+=================================
+1) OOPS Concept
+
+1. Encapsulation
+ Encapsulation refers to bundling the data (attributes) and the methods (functions) that operate on the data into a single unit, called a class. 
+ It also involves restricting direct access to some components of an object, which is achieved through access modifiers like private, protected, and public.
+
+2. Abstraction
+Definition: Abstraction means hiding the internal details of an implementation and exposing only the functionality to the user.
+ It helps reduce complexity by showing only essential features.
+
+Achieved By:
+
+Abstract classes (with at least one pure virtual function in C++).
+Interfaces in languages like Java.
+
+3.Inheritance
+Definition: Inheritance is the mechanism by which one class (child) can acquire the properties and behaviors of another class (parent). 
+It promotes code reuse and establishes a hierarchical relationship between classes.
+
+Types of Inheritance in C++:
+
+Single Inheritance: One class inherits from another.
+Multiple Inheritance: A class inherits from multiple classes.
+Multilevel Inheritance: A class inherits from a derived class.
+Hierarchical Inheritance: Multiple classes inherit from a single class.
+Hybrid Inheritance: A mix of multiple and multilevel inheritance.
+
+4. Polymorphism
+Definition: Polymorphism means "many forms." It allows the same function or operator to behave differently based on the object or context.
+
+Types:
+
+Compile-time Polymorphism: Achieved through function overloading and operator overloading.
+Run-time Polymorphism: Achieved through method overriding using virtual functions.
+=============================================================================================
+2.Design Patterns
+
+1) Creational
+---------------
+ 1. Singleton: 
+   Ensures that a class has only one instance and provides a global point of access to it.
+
+Example: A single configuration manager that manages application settings.
+
+2. Factory Method:
+   Defines an interface for creating objects but allows subclasses to alter the type of objects that will be created.
+
+Example: A logger that decides at runtime whether to create a file logger or console logger.
+
+3. Abstract Factory: 
+   Provides an interface for creating families of related or dependent objects without specifying their concrete classes.
+
+Example: A GUI library that can create components (buttons, text fields) for different operating systems.
+
+4. Builder: 
+   Separates the construction of a complex object from its representation, allowing the same construction process to create different representations.
+
+Example: A meal builder that can construct different types of meals (vegetarian, non-vegetarian) with various dishes.
+
+5. Prototype: 
+   Creates new objects by copying an existing object, known as the prototype.
+
+Example: A document template that can be cloned to create multiple similar documents with slight modifications.
+-----------------------------------------------
+2) Structural Design 
+-----------------------
+1. Adapter:
+ Converts an interface of a class into another interface clients expect, allowing incompatible interfaces to work together.
+
+Example: A class that adapts between a new payment API and an old payment processing system.
+
+2. Bridge: 
+Separates an abstraction from its implementation, allowing them to vary independently.
+
+Example: A device controller that separates the interface (e.g., remote control) from the actual device (e.g., TV or radio).
+
+3. Composite: 
+Composes objects into tree-like structures to represent part-whole hierarchies, so clients can treat individual and composite objects uniformly.
+
+Example: A file system where files and folders are treated the same way, allowing recursive directory structures.
+
+4. Decorator: 
+Adds new functionality to an object dynamically, without altering its structure.
+
+Example: A text editor that allows applying different text formats (bold, italic) to the same text object.
+
+5. Facade: 
+Provides a simplified interface to a complex system of classes, libraries, or frameworks.
+
+Example: A single API that combines multiple subsystems of a home automation system (lights, temperature, security).
+
+6. Flyweight: 
+Reduces memory usage by sharing common parts of objects that are similar, instead of creating new ones each time.
+
+Example: A graphical editor that reuses shared graphical objects (like fonts or colors) to draw shapes more efficiently.
+
+7. Proxy: 
+Provides a placeholder or surrogate for another object to control access to it.
+
+Example: A proxy that manages access to a remote server, handling connection and authentication.
+=======================================================================
+3) Behavioral Design pattern
+-------------------------------
+1. Chain of Responsibility: 
+Passes a request along a chain of handlers, where each handler decides to process the request or pass it to the next one in the chain.
+
+Example: A support system where requests are escalated from junior to senior support based on complexity.
+
+2. Command: 
+Encapsulates a request as an object, allowing you to parameterize methods with different requests, queue them, or log them.
+
+Example: A remote control where each button press is a command that can be stored or undone.
+
+3. Iterator: 
+Provides a way to access elements of an aggregate object sequentially without exposing its underlying structure.
+
+Example: A list or array that you can iterate over, regardless of its internal implementation.
+
+4. Mediator: 
+Defines an object that encapsulates how a set of objects interact, promoting loose coupling by keeping objects from referring to each other directly.
+
+Example: A chat room where each participant communicates through a central mediator.
+
+5. Memento: 
+Allows capturing and restoring an object’s internal state without violating encapsulation.
+
+Example: An undo feature in a text editor that stores previous states of a document.
+
+6. Observer: 
+Defines a subscription mechanism to allow multiple objects (observers) to listen to events or changes in another object (subject).
+
+Example: A news publisher system where subscribers are notified of new articles.
+
+7. State: 
+Allows an object to alter its behavior when its internal state changes, appearing as if it changed its class.
+
+Example: A traffic light system where each light color (red, green, yellow) represents a different state.
+
+8. Strategy: 
+Defines a family of algorithms, encapsulates each one, and makes them interchangeable at runtime.
+
+Example: A payment system that allows switching between different payment methods (credit card, PayPal).
+
+9. Template Method: 
+Defines the skeleton of an algorithm, with subclasses defining certain steps, allowing the algorithm’s structure to stay the same.
+
+Example: A data processing pipeline where each step (load, transform, save) is defined in a base class but customized by subclasses.
+
+10. Visitor: 
+Allows adding new operations to classes without modifying them, using a visitor class that performs the operation.
+
+Example: A tax calculation that applies different rates based on visitor classes to different types of products.
+=========================================================================
+3) UML
+--------------
+In Low-Level Design (LLD), a UML (Unified Modeling Language) diagram is a standardized way to visually represent the components, relationships, and interactions of a system. It is used to model the structure and behavior of software systems in a clear and organized manner.
+
+Types of UML Diagrams in LLD:
+Class Diagram: Represents classes, attributes, methods, and relationships (e.g., inheritance, association).
+Sequence Diagram: Shows the flow of messages and interactions between objects in a specific sequence.
+
+1. Inheritance
+Definition: Represents a "is-a" relationship between a parent (superclass) and a child (subclass).
+
+Example: A Car is a type of Vehicle.
+Car->Vehicle
+
+2. Association
+Definition: A general relationship between two classes, indicating that they can communicate or interact with each other
+
+Example: A Teacher teaches multiple Students.
+Teacher  --------  Student
+
+3.Aggregation ("has-a" relationship)
+Definition: A special type of association where one class is a "whole" and the other is a "part," 
+but the part can exist independently of the whole.
+
+Example: A Department aggregates multiple Professors.
+Department ----<> Professor
+
+4. Composition
+Definition: A stronger form of aggregation where the "whole" owns the "part," and the part cannot exist independently of the whole.
+
+Example: A House is composed of multiple Rooms. If the house is destroyed, the rooms are too.
+House ----◆ Room
+=============================================================================
+4) SOLID Principles
+-------------------
+S: Single Responsibility Principle (SRP)
+Definition: A class should have only one reason to change, meaning it should only have one job or responsibility.
+
+Example: A class managing user data should not also handle database operations.
+
+O: Open/Closed Principle (OCP)
+Definition: Classes should be open for extension but closed for modification. This means you can add new functionality without changing existing code.
+
+Example: Use interfaces or inheritance to add features instead of altering existing code.
+
+L: Liskov Substitution Principle (LSP)
+Definition: Subclasses should be replaceable with their base classes without affecting the program’s behavior.
+
+Example: If a Rectangle class is replaced with a Square subclass, the program should still work correctly.
+
+I: Interface Segregation Principle (ISP)
+Definition: A class should not be forced to implement interfaces it does not use. Create smaller, specific interfaces instead of one large one.
+
+Example: A Printer interface should have separate methods for Print() and Scan() rather than a single interface forcing both functionalities.
+
+D: Dependency Inversion Principle (DIP)
+Definition: High-level modules should not depend on low-level modules; both should depend on abstractions.
+
+Example: A PaymentProcessor class should depend on an abstract PaymentService interface rather than a concrete PayPalService class.
+================================================================================
