@@ -1,0 +1,46 @@
+Topics
+--------
+1.Operating system and its types
+2.Process management
+3.CPU Scheduling Algorithms(FCFS,SJF,SRTF)
+4.IPC mechanism (Pipes,FIFO,sockets,Message queues,Shared memory,Semaphore)
+5.Process synchronisation
+6.Threads
+7.Threads vs Mutex
+8.Deadlock
+9.Memory management
+10.Virtual Memory
+
+Coding
+---------
+1.IPC mechanism
+  1.socket programming
+  2.Pipes
+
+2.Multithreading 
+  1.Thread 
+  2.Mutex
+=====================================
+1)Difference between static linking and dynamic linking
+Static Linking
+----------------
+Definition:
+
+The process of copying library code into the executable at compile time.
+Characteristics:
+
+The program is self-contained; no external library dependencies are required at runtime.
+The library code becomes part of the final executable file.
+
+Dynamic Linking
+-----------------
+Definition:
+
+The process of linking library code to a program at runtime, rather than compile time.
+Characteristics:
+
+The program depends on external shared libraries (e.g., .dll, .so) at runtime.
+Only references to the library code are included in the executable.
+==================================================================
+4) How to differentiate parent and child process
+5) yocto vs bitbake images

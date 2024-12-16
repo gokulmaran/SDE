@@ -1,0 +1,23 @@
+Company wise
+
+1)AMI,Light Wonder
+C++&OOPS
+Linux
+DBMS
+Embedded (UART,SIP,I2C)
+Codings Basics-DS
+1)Fundamentals
+2)Patterns
+3)Arrays
+4)Two pointer
+5)2D Arrays
+6)Character Arrays
+7)Strings
+8)Sorting
+9)Binary Search
+10)bitmasking
+11)linked list
+12)Stacks&Queues
+13)Heaps
+14)Hashmap&sets
+=================================================

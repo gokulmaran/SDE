@@ -1,0 +1,262 @@
+Knowledge Required to become better as HLD
+Topics (Market simplified)
+------------
+
+1) Distributed System
+2) Microservices Architecture
+3) CAP theorem
+4) Scalability and performance
+5) Proxies
+6) Load balancing
+7) Consistent hashing
+8) Caching
+9) Database Sharding
+10) SQL vs NoSQL
+11) Network protocols (HTTP,XMPP,websockets)
+12) long Polling, Web sockets, server sent events
+13) Replication
+14) Queues
+15) Understanding of DNS System
+======================================
+Link-Playlist Concept and Coding: https://youtu.be/rliSgjoOFTs?t=354&si=ErtWX4XXD6W_XZAQ
+
+Link Neetcode: https://neetcode.io/courses/system-design-for-beginners/3
+
+Practice Questions link: https://neetcode.io/courses/system-design-interview/3
+
+===============================
+1)Distributed system
+---------------------
+A Distributed System is a network of independent computers (or nodes) that communicate and coordinate with each other to appear as a single coherent system to end-users.
+ These systems are designed to achieve specific goals such as scalability, fault tolerance, high performance, and reliability.
+Common Architectures
+Client-Server:
+
+Clients request services, and servers provide them (e.g., web applications).
+Peer-to-Peer (P2P):
+
+Nodes act as both clients and servers (e.g., BitTorrent).
+Microservices:
+
+Applications are divided into small, loosely coupled services.
+Examples
+Google Search Engine: Distributed across thousands of servers worldwide
+=================================
+2)Microservices Architecture
+------------------------
+Microservices Architecture is a design pattern used to build applications as a collection of small, autonomous services that communicate with each other. 
+Each service focuses on a specific business capability, is independently deployable, and uses lightweight communication protocols like HTTP/REST or messaging queues.
+======================================
+3)CAP theorem
+-------------
+The CAP theorem (Consistency, Availability, Partition Tolerance), introduced by Eric Brewer, describes the limitations of distributed systems when dealing with failures and trade-offs between key properties.
+ It states that a distributed system can only achieve two out of three of the following properties simultaneously:
+ ==================================
+
+ 4)Scaling and performance
+ -------------------
+ Scalability
+Definition: Scalability is the ability of a system to handle increased workload or demand by adding resources (e.g., more servers, CPUs, or memory).
+
+Types of Scalability:
+
+Vertical Scalability (Scaling Up):
+
+Adding resources to a single machine (e.g., increasing CPU, RAM).
+Limited by the capacity of a single machine.
+Horizontal Scalability (Scaling Out):
+
+Adding more machines (or nodes) to a system.
+Used in distributed systems to handle large-scale demand.
+Examples:
+
+A database like MySQL can scale vertically by upgrading hardware or horizontally using a distributed database like Cassandra.
+Cloud platforms like AWS, Azure, and Google Cloud support horizontal scaling through autoscaling features.
+Key Metrics for Scalability:
+
+Throughput: How many tasks a system can handle per unit of time.
+Latency: How the response time changes with increased load.
+=============================================
+5)Proxies
+===========
+A proxy is an intermediary server or system that acts as a gateway between a user (client) and another server, service, or resource. 
+Proxies are commonly used to enhance security, privacy, performance, and functionality in network communications.
+
+Types of Proxies
+Forward Proxy:
+
+Represents the client and forwards requests from the client to the internet.
+Often used in enterprises for filtering content, caching, or monitoring.
+Example:
+
+A company uses a forward proxy to block access to certain websites for employees.
+Reverse Proxy:
+
+Represents the server and handles client requests on behalf of the server.
+Commonly used for load balancing, caching, and security.
+Example:
+
+NGINX or HAProxy managing traffic for a web application.
+====================================================
+6) Load balancing
+------------------
+Load balancing is a technique used in distributed computing to distribute workloads evenly across multiple servers, network links, or other computing resources. Its goal is to optimize resource use, maximize throughput, minimize response time, and avoid overloading any single resource.
+
+Key Concepts of Load Balancing
+Even Distribution:
+
+Ensures that no single server or resource is overwhelmed by requests, leading to better overall system performance.
+
+Types of Load Balancing
+Hardware Load Balancers:
+
+Dedicated physical devices for distributing network or application traffic.
+Example: F5 Networks, Citrix ADC.
+Software Load Balancers:
+
+Applications that distribute load.
+Example: NGINX, HAProxy, Apache Traffic Server.
+=======================================================
+ 7)Consistent hashing
+ -------------
+ Consistent Hashing is a distributed hashing technique used to evenly distribute data across a dynamic set of nodes, ensuring minimal data redistribution when nodes are added or removed. 
+ It is widely used in distributed systems to achieve scalability and fault tolerance.
+ =================================
+ 8)Caching
+ -----------
+ Caching is a mechanism for temporarily storing frequently accessed data in a high-speed storage layer, 
+ so it can be retrieved faster than fetching it from its primary storage location. Caching is widely used in computing
+  to enhance performance and efficiency, reduce latency, and improve the user experience.
+
+Key Concepts of Caching
+Storage Location:
+
+Cache stores data in a location that allows for quicker access, such as memory (RAM), disk, or specialized cache hardware.
+Cache Hit:
+
+When requested data is found in the cache, reducing the need for more time-consuming operations.
+=============================================
+9) Database Sharding
+---------------------
+Database sharding is a technique in distributed database systems that involves partitioning a large database into smaller, 
+more manageable segments called shards. Each shard is an independent database that contains a subset of the data and operates 
+as a standalone unit. Sharding is often used to improve scalability, performance, and availability in systems with high traffic and 
+large datasets.
+
+Key Concepts of Database Sharding
+Horizontal Partitioning:
+
+Sharding distributes rows of a table across multiple databases.
+Each shard contains the same schema but different rows.
+Independent Databases:
+
+Each shard operates independently, enabling distributed query processing and management.
+Shard Key:
+
+A shard key determines how data is divided among shards. It is typically a column like user ID or geographic region.
+===============================================
+10) SQL vs NoSQL
+-------------------
+SQL (Structured Query Language)
+SQL databases use a relational model and are typically organized into tables with rows and columns. Data relationships are explicitly defined.
+
+Key Features:
+
+Schema-Based: Requires a predefined schema, making it highly structured.
+ACID Properties: Ensures strong consistency with atomicity, consistency, isolation, and durability.
+Query Language: Uses SQL for defining and manipulating data.
+Vertical Scaling: Typically scales by upgrading hardware.
+Examples:
+
+MySQL, PostgreSQL, Microsoft SQL Server, Oracle Database.
+---------------------
+NoSQL (Not Only SQL)
+NoSQL databases are designed to handle unstructured or semi-structured data. They use a variety of data models, such as key-value, document, column-family, or graph.
+
+Key Features:
+
+Schema-Less: Flexible schema allows for dynamic changes.
+BASE Properties: Focus on availability and scalability over strong consistency.
+Horizontal Scaling: Easily scales by adding more servers.
+Examples:
+
+MongoDB (Document), Cassandra (Column-Family), Redis (Key-Value), Neo4j (Graph).
+====================================================
+11)Network protocols (HTTP,XMPP,websockets)
+---------------------------------
+Network protocols define the rules and conventions for communication between devices or systems in a network. 
+Three popular protocols for real-time, bidirectional communication are HTTP, XMPP, and WebSockets. 
+Here’s a brief comparison of each
+
+1. HTTP (Hypertext Transfer Protocol)
+Nature: Request-Response Protocol
+HTTP is the foundation of any data exchange on the Web. It works on a client-server model, where the client sends a request and 
+the server responds.It is stateless, meaning each request is independent, and the server does not store any information about previous requests.
+
+2. XMPP (Extensible Messaging and Presence Protocol)
+Nature: Real-Time Messaging Protocol
+XMPP is an open standard for messaging and presence. It supports asynchronous communication and 
+is commonly used in instant messaging systems. XMPP uses XML-based messages and supports client-server and server-to-server communication.
+
+3. WebSockets
+Nature: Full-Duplex, Bidirectional Communication Protocol
+WebSockets provide full-duplex communication over a single, long-lived connection. Once established, WebSocket allows 
+both the client and server to send and receive messages at any time. 
+Unlike HTTP, WebSocket allows communication without the overhead of establishing new connections for each interaction.
+
+===========================================================
+12) Long Polling, WebSockets,SSE
+1. Long Polling
+Nature: Long polling is a technique used by web servers to emulate real-time communication in environments where a persistent connection (like WebSockets) is not feasible.
+
+How It Works: In long polling, the client sends an HTTP request to the server. If the server has no data to send, 
+it holds the request open until new data is available. Once the data is sent, the server closes the connection, and the client immediately reopens 
+it to wait for more updates.
+
+2. WebSockets
+Nature: WebSockets enable full-duplex communication channels over a single, long-lived connection.
+ Once the WebSocket connection is established, both client and server can send and receive messages at any time.
+
+3. Server-Sent Events (SSE)
+Nature: Server-Sent Events (SSE) is a one-way communication protocol in which the server sends updates to the client over a persistent HTTP connection.
+
+How It Works: The client opens a connection to the server, and the server sends updates over that connection whenever new data is available.
+ Unlike WebSockets, SSE only supports server-to-client communication.
+ ============================================================
+ 13)Replication
+
+ Replication is the process of creating and maintaining copies of data across multiple servers or nodes within a distributed system. 
+ It helps improve fault tolerance, availability, and read performance by ensuring that data is accessible from multiple locations, even if one or more systems fail.
+
+Master-Slave Replication (Primary-Secondary):
+
+How it works: One node (master/primary) handles write operations and propagates changes to one or more slave/secondary nodes that handle read operations.
+
+Content Delivery Networks (CDNs):
+
+CDNs replicate web content across multiple servers worldwide to provide low-latency access to users by serving data from the nearest location.
+====================================================
+14)Message Queues (MQ)
+A message queue (MQ) is an asynchronous communication mechanism used to pass messages between different components, processes, or 
+systems. It allows decoupling between producers and consumers of messages, ensuring that processes do not need to communicate directly, 
+which improves scalability, fault tolerance, and flexibility.
+
+Key Concepts of Message Queues
+Producer and Consumer:
+
+Producer: The component that sends the message.
+Consumer: The component that receives and processes the message.
+The producer and consumer do not need to run at the same time. This allows for asynchronous communication.
+===================================================
+15) Understanding the DNS (Domain Name System)
+-------------------------------------------------
+The Domain Name System (DNS) is a fundamental part of the internet's infrastructure.
+ It is essentially a hierarchical naming system for computers, services, or any resource connected to the internet.
+DNS allows users to access websites and services using human-readable domain names, such as www.example.com, instead of having to
+remember numeric IP addresses like 192.168.1.1.
+
+How DNS Works:
+Domain Names and IP Addresses:
+
+Every device on the internet is assigned a unique IP address. DNS translates human-readable domain names into these IP addresses, which are used by routers and other network devices to route the traffic correctly.
+====================================================

@@ -1,0 +1,416 @@
+Topics
+------
+1. Data types
+2. Functions(Call by value,Call by reference)
+3. Pointers (dangling pointer)(malloc vs new)
+4. User defined function (Structure,Union,enum,typedef)
+5. File handling and streams
+6. templates
+7. STL (vector vs list)
+8. OOPS concept
+9. Constructors and Destructors (Private Constructors and Destructors, Virtual Destructors,Shallow copy and deep copy,static members in class)
+10. Inheritance (Types, Virtual Class, Dreaded Diamond Problem)
+11. Types of polymorphism
+12. Virtual Functions (Virtual table and virtual pointer)- Run-time Polymorphism
+13. Smart pointers
+
+Coding
+---------
+1.OOPS
+  1.Implementation of smart pointers
+  2.Implementation of String class
+
+2.String
+  1.Reverse each word in a string
+
+3.Linked List (Creation need to be clear)
+  1.Reverse a Linked List
+  2.delete a middle node of LInkedList
+  3.Merge 2 lists into a single list
+
+4.Bit masking
+  1.calculate set bits in a number
+  2.swap nibbles
+========================================
+1) Class vs Structure
+S. No.
+
+Class
+
+Structure
+
+1
+
+Members of a class are private by default.
+
+Members of a structure are public by default.
+
+2
+
+It is declared using the class keyword.
+
+It is declared using the struct keyword.
+
+3
+
+It is normally used for data abstraction and inheritance.
+
+It is normally used for the grouping of different datatypes.
+
+4
+
+Syntax:
+
+class class_name {
+data_member;
+member_function;
+};
+
+Syntax:
+
+struct structure_name {
+structure_member1;
+structure_member2;
+};
+=====================================================================
+2) Vtable
+The vTable, or Virtual Table, is a table of function pointers that is created by the 
+compiler to support dynamic polymorphism. Whenever a class contains a virtual function, 
+the compiler creates a Vtable for that class. Each object of the class is then provided 
+with a hidden pointer to this table, known as Vptr.
+
+Vptr
+The virtual pointer or _vptr is a hidden pointer that is added by the compiler as a member of the class to point to the VTable of that class.
+ For every object of a class containing virtual functions, a vptr is added to point to the vTable of that class.
+ It’s important to note that vptr is created only if a class has or inherits a virtual function.
+===============================================================
+3)Static members in class
+In C++, static members in a class refer to variables and functions that are shared across all instances of the class. 
+They are associated with the class itself rather than any specific object of the class.
+=========================================================
+4) Smart pointers
+
+2) How abstraction will be achieved
+3) How run time polymorphism will be achieved
+4) Virtual table and virtual pointer
+5). templates in c++
+6) Polymorphism (compile time and runtime)
+7)vector vs list
+8) pointers(new vs malloc, dangling pointer)
+=========================================================
+7) What is smart pointers
+     --> Smart pointers are advanced C++ pointers that manage the lifetime of dynamically allocated objects. 
+    Unlike raw pointers (*), smart pointers automatically handle memory allocation and deallocation, reducing the chances of memory leaks and dangling pointers
+    1. std::unique_ptr
+           Ownership: Only one unique_ptr owns the object at a time.
+           Features:
+               Automatically deletes the object when the unique_ptr goes out of scope. 
+               Ownership cannot be shared or copied but can be transferred using std::move.
+            int main() {
+              std::unique_ptr<int> ptr = std::make_unique<int>(10); // Create a unique_ptr
+              std::cout << "Value: " << *ptr << std::endl;
+
+               // Transfer ownership
+              std::unique_ptr<int> ptr2 = std::move(ptr);
+               if (!ptr) {
+                 std::cout << "ptr is null after move" << std::endl;
+             }
+               std::cout << "Value from ptr2: " << *ptr2 << std::endl;
+
+               return 0;
+            }
+
+    2. std::shared_ptr
+           Ownership: Allows multiple shared_ptrs to share ownership of the same object.
+           Features:
+               Keeps a reference count to track ownership.
+               The object is deleted only when the last shared_ptr pointing to it is destroyed.
+
+               int main() {
+                 std::shared_ptr<int> ptr1 = std::make_shared<int>(20);
+                 std::shared_ptr<int> ptr2 = ptr1; // Shared ownership
+
+                 std::cout << "Value: " << *ptr1 << ", Ref count: " << ptr1.use_count() << std::endl;
+
+                 ptr2.reset(); // Release one reference
+                 std::cout << "After reset, Ref count: " << ptr1.use_count() << std::endl;
+
+                 return 0;
+                }
+    3. std::weak_ptr
+           Ownership: Does not contribute to the reference count of a shared_ptr.
+           Features:
+                Used to prevent circular references in shared_ptrs.
+                Provides a way to access the object without owning it.
+                Needs to be converted to a shared_ptr using lock() before use.
+
+            int main() {
+              std::shared_ptr<int> sharedPtr = std::make_shared<int>(30);
+              std::weak_ptr<int> weakPtr = sharedPtr; // Does not increase ref count
+
+              std::cout << "Ref count: " << sharedPtr.use_count() << std::endl;
+
+               if (auto ptr = weakPtr.lock()) { // Check if shared_ptr is still valid
+                   std::cout << "Value: " << *ptr << std::endl;
+               } else {
+                     std::cout << "Shared pointer expired" << std::endl;
+               }
+
+               sharedPtr.reset(); // Destroy shared_ptr
+               if (weakPtr.expired()) {
+                   std::cout << "Shared pointer is now expired" << std::endl;
+                 }
+
+               return 0;
+             }
+======================================================================
+8) Types of Polymorphism in C++
+    -->It have one name but many forms
+Compile-Time Polymorphism (Static Binding):
+
+       Resolved at compile time.
+        Achieved using: 
+           Function Overloading
+         -->Operator Overloading
+              class Complex {
+               public:
+                 int real, imag;
+                 Complex(int r, int i) : real(r), imag(i) {}
+                 Complex operator+(const Complex& c) {
+                   return Complex(real + c.real, imag + c.imag);
+                }
+              };
+
+             int main() {
+               Complex c1(3, 4), c2(1, 2);
+               Complex c3 = c1 + c2; // Uses overloaded '+' operator
+               cout << "Sum: " << c3.real << " + " << c3.imag << "i" << endl;
+
+               return 0;
+            }
+Run-Time Polymorphism (Dynamic Binding):
+
+      Resolved at runtime.
+        Achieved using:
+            Virtual Functions
+        -->Function Overriding
+            #include <iostream>
+            using namespace std;
+
+            class Parent {
+           public:
+            void GeeksforGeeks()
+            {
+                 cout << "Base Function" << endl;
+            }
+           };
+
+           class Child : public Parent {
+           public:
+            void GeeksforGeeks()
+            {
+               cout << "Derived Function" << endl;
+            }
+           };
+
+           int main()
+           {
+              Child Child_Derived;
+              Child_Derived.GeeksforGeeks();
+
+              // access GeeksforGeeks() function of the Base class
+              Child_Derived.Parent::GeeksforGeeks();
+              return 0;
+           }
+=================================================
+8)  vector vs list
+------------------
+
+Vector vs List in C++ STL
+Both vector and list are sequence containers in C++ STL, but they have different implementations, strengths, and weaknesses. Here's a detailed comparison:
+
+1) vector dynamic array able to grow and shrink their own size 
+2) list insertion and deletion possible at front and back
+
+Key Differences
+Aspect	Vector (Dynamic Array)	List (Doubly Linked List)
+Memory Layout	Contiguous memory layout (dynamic array).	Non-contiguous memory (linked nodes).
+Random Access	Fast (O(1)) using an index (e.g., vec[i]).	Not possible (O(n) traversal required).
+Insertion/Deletion (Middle)	Slow (O(n)): Elements must be shifted to maintain order.	Fast (O(1)): No shifting required, but iterator is needed.
+Insertion/Deletion (End)	Fast (Amortized O(1)): Only requires resizing occasionally.	Fast (O(1)): Direct addition of new nodes.
+Memory Overhead	Minimal: Only extra capacity for future growth.	High: Pointers for each node (prev and next).
+Cache Friendliness	High: Contiguous memory improves traversal performance.	Low: Nodes are scattered in memory.
+Iterators	Invalidated when elements are added or removed, except at the end.	Not invalidated unless the deleted element is accessed.
+Traversal	Faster due to contiguous memory.	Slower due to pointer chasing.
+Best Use Cases	When random access is needed or modifications are rare.	When frequent insertions/deletions are needed in the middle.
+===================================================
+9) new vs delete
+   int main() {
+    // Allocate memory for an array of size 5
+    int* arr = new int[5];
+
+    // Assign values to the array
+    for (int i = 0; i < 5; i++) {
+        arr[i] = i + 1;
+    }
+
+    // Print the array
+    for (int i = 0; i < 5; i++) {
+        cout << arr[i] << " ";
+    }
+
+    // Deallocate memory
+    delete[] arr;
+
+    return 0;
+}
+======================================================
+10) malloc vs calloc
+
+malloc:
+    Memory Allocation.
+    Allocates a single block of memory of a specified size.
+    Does not initialize memory, meaning the allocated memory contains garbage values.
+    Takes a single parameter: size (number of bytes to allocate).
+    void* malloc(size_t size);
+    Faster, as it does not initialize memory.
+    Used when memory initialization is not required, and you can later set the values manually.
+
+calloc:
+    Contiguous Allocation.
+    Allocates multiple blocks of memory, each of a specified size.
+    Initializes all allocated memory to zero.
+    Takes two parameters: num (number of blocks) and size (size of each block).
+    void* calloc(size_t num, size_t size);
+    Slightly slower due to memory initialization to zero.
+    Used when zero-initialized memory is required, such as when you want to ensure that all elements are initially set to zero.
+====================================================
+11)malloc,calloc,realloc,free 
+
+1. malloc (Memory Allocation)
+Purpose: Allocates a specified number of bytes in memory and returns a pointer to the first byte.
+Initialization: Does not initialize the memory. The contents will contain garbage values.
+
+int* arr = (int*)malloc(5 * sizeof(int)); // Allocate memory for 5 integers
+if (arr == NULL) {
+    printf("Memory allocation failed\n");
+}
+
+2. calloc (Contiguous Allocation)
+Purpose: Allocates memory for an array of elements and initializes all the bytes to zero.
+Initialization: Memory is initialized to zero.
+
+int* arr = (int*)calloc(5, sizeof(int)); // Allocate memory for 5 integers, initialized to 0
+if (arr == NULL) {
+    printf("Memory allocation failed\n");
+}
+
+3. realloc (Reallocation)
+Purpose: Resizes previously allocated memory to a new size.
+Behavior:
+If the new size is larger, additional memory is allocated.
+If the new size is smaller, the memory is truncated.
+
+int* arr = (int*)malloc(5 * sizeof(int));
+arr = (int*)realloc(arr, 10 * sizeof(int)); // Resize to hold 10 integers
+if (arr == NULL) {
+    printf("Memory reallocation failed\n");
+}
+
+4.free 
+Purpose: Frees memory that was previously allocated using malloc, calloc, or realloc
+================================================================
+12) structure vs Union
+
+Structure: 
+   Each member has its own memory allocation, meaning each member occupies separate memory space.
+   The total size of a structure is the sum of the sizes of all its members.
+   All members can be accessed simultaneously, and each member can hold a value independently.
+   Used for grouping data where all members are required simultaneously, such as a record or object.
+   All members can be initialized (if supported by the compiler), allowing multiple values to be set at once.
+
+Union:
+    All members share the same memory location, meaning only one member can hold a value at any given time.
+    The size of a union is equal to the size of its largest member since all members share the same memory space.
+    Only one member can be accessed at a time, and assigning a value to one member will overwrite the value of any other member.
+    Used for memory-efficient scenarios where only one member is needed at a time, such as in situations with limited memory or when representing different data types in the same memory location.
+    Only the first member can be initialized, and assigning a value to any other member will overwrite the first member's value.
+
+#include <stdio.h>
+
+struct Example {
+    int a;
+    float b;
+    char c;
+};
+
+int main() {
+    struct Example obj = {10, 3.14, 'X'};
+
+    printf("a = %d, b = %.2f, c = %c\n", obj.a, obj.b, obj.c);
+    return 0;
+}
+==============================================================
+13)shllow vs deep copy
+
+Shallow Copy:
+   Copies only the reference or memory address of objects.
+   Changes in one object affect the other (they share the same resources).
+   Faster, as it only copies references to the original object.
+   Useful when data sharing is acceptable or desired, where both objects can refer to the same data.
+   Consumes less memory because only the references are copied, not the actual data.
+
+Deep Copy:
+    Copies the entire object, including its referenced data.
+    Changes in one object do not affect the other (each has independent resources).
+    Slower, as it creates and copies new memory for all data in the object.
+    Used when objects must be completely independent and should not share data.
+    Requires more memory because new copies of all data are created in the process.
+===============================================================
+14)templates in c++
+
+Templates in C++ allow you to write generic code that works with any data type. They enable the creation of functions, classes, or structures that can operate with different types of data without needing to be rewritten for each type.
+
+1)function templates
+2) class templates
+====================================================
+15)User defined data type
+    1. Structures (struct)
+       A struct is a user-defined data type that groups different types of data together. Each element of a struct is called a member. A struct can hold variables of different types.
+    2. Classes (class)
+       A class is similar to a struct, but it provides additional features such as access control (e.g., public, private, protected) and functions (methods). A class is used to represent objects with attributes and behaviors.
+    3. Unions (union)
+       A union is a special user-defined data type where all members share the same memory location. This means only one member can hold a value at a time, but they all share the same memory space. The size of a union is the size of its largest member.
+    4. Enumerations (enum)
+       An enum is a user-defined data type that consists of a set of named integer constants. It is used when you need to represent a collection of related values with more meaningful names.
+    5. Typedef (typedef) and using
+       typedef and using are used to create alias names for existing data types, making the code more readable or easier to maintain.
+=========================================================
+16)What is called memory leak
+   1)Memory is allocated ,but not deallocated is called memory leak
+======================================================
+17)
+1. Call by Value:
+In call by value, a copy of the actual argument is passed to the function.
+The function works with this copy, and any changes made to the parameter inside the function do not affect the original argument.
+Characteristics:
+A copy of the data is created in memory, so the original variable is unaffected by changes inside the function.
+It is generally slower and uses more memory because of the extra memory needed to store copies of the arguments.
+
+2. Call by Reference:
+In call by reference, instead of passing a copy of the argument, the actual memory address (or reference) of the argument is passed to the function.
+Any changes made to the parameter inside the function directly affect the original argument, since both the formal and actual parameters point to the same memory location.
+=======================================================
+18) Stack vs heap
+1. Stack Memory
+Purpose: The stack is used for static memory allocation, where data is allocated and deallocated in a Last In First Out (LIFO) order.
+Memory Allocation:
+Automatically managed by the compiler.
+Used for storing function call information, local variables, and return addresses.
+
+2. Heap Memory
+Purpose: The heap is used for dynamic memory allocation, where memory can be allocated at runtime using functions like new (in C++) or malloc (in C).
+Memory Allocation:
+Managed manually by the programmer.
+Used to store data that needs to persist for a longer duration or whose size is not known at compile-time (like dynamic arrays or objects created with new).
+==========================================================

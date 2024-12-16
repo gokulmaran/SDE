@@ -1,0 +1,36 @@
+DSA Basics (part part logic ,equal code) (Comcast) 
+
+(line working code + concept known)
+(Working code known)
+(dry run and get the code)
+-----------
+1) Fundamentals-- use of digits,numbers
+2) Patterns-- iterate with loops and operators
+3) Arrays-- iteration with loops, hashtable, innbuilt functions
+4) Two pointer-- iterate on basic loop (i,j), initialized with variable, nested loop
+5) Prefix sum-- iterate on Prefix and suffix sum of calculation
+6) 2D Arrays-- iteration with i,j & inbuilt functions, with 1D array
+7) Character Arrays-- iterate with loops,inbuilt functions
+8) Strings-- iterate with inbuilt functions
+9) Sliding  Window-- Fixed size and variable size window
+10) Sorting-- Sorting Algos, sort with comparator , merge and quick sort
+11) Binary Search-- Iterate on left half and right half (BS, modified BS, BS on answers)
+12) Bit Masking-- Iterate with use of bit operators
+13) Number Theory-- concepts of GCD, Divisors, Sieve of erathonsis
+==================================
+DSA--Advanced
+-------------
+1) Recursion  -- recurrence relation and write code for one
+2) DP-Memorization -- recurrence relation
+3) DP-Tabulation -- table to recurrence relation 
+4) Linked list -- iterate & rec on Node(data,next)
+5) stacks,Queues,Deque --Use of inbuilt functions
+6) Binary Trees -- rec & iterate on left subtrre and right subtree
+7) BST -- rec & iterate on left smaller and right larger 
+8) Heaps -- Use of inbuilt functions
+9) Hashmaps -- Use of inbuilt functions
+10) Tries -- rec & iterate on Node class 
+11) Greedy -- Find the best choice of locall optimum (sorting)
+12) Backtracking -- set condition , rec call, removal condition
+13) Graphs --  rec & iterate (visited ,dist array) on 2d arrays/list 
+==============================

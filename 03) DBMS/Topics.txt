@@ -1,0 +1,89 @@
+Topics
+------------
+1)SQL QUeries
+  
+====================
+
+1)Return the 3rd highest  employee query
+SELECT *
+FROM employees
+ORDER BY salary DESC
+LIMIT 1 OFFSET 2;
+
+---------------------------------
+1. What is the difference between WHERE and HAVING clauses?
+Answer:
+
+WHERE: Filters rows before grouping and works on individual rows in a table.
+HAVING: Filters grouped data after the GROUP BY clause and works on aggregate functions.
+Example:
+
+sql
+Copy code
+-- WHERE filters rows before grouping
+SELECT department, COUNT(*) 
+FROM employees 
+WHERE salary > 50000 
+GROUP BY department;
+
+-- HAVING filters grouped results
+SELECT department, COUNT(*) 
+FROM employees 
+GROUP BY department 
+HAVING COUNT(*) > 5;
+=========================================================================
+2. How do you find the second highest salary in a table?
+Answer:
+
+Using DISTINCT and LIMIT:
+sql
+Copy code
+SELECT DISTINCT salary 
+FROM employees 
+ORDER BY salary DESC 
+LIMIT 1 OFFSET 1;
+Using Subquery:
+sql
+Copy code
+SELECT MAX(salary) 
+FROM employees 
+WHERE salary < (SELECT MAX(salary) FROM employees);
+===================================================================================
+3. What are the different types of JOINs in SQL?
+Answer:
+
+INNER JOIN: Returns rows that have matching values in both tables.
+LEFT JOIN: Returns all rows from the left table and matching rows from the right table (nulls for unmatched rows).
+RIGHT JOIN: Returns all rows from the right table and matching rows from the left table (nulls for unmatched rows).
+FULL OUTER JOIN: Returns all rows when there is a match in either table, with nulls for unmatched rows.
+Example:
+
+sql
+Copy code
+-- INNER JOIN example
+SELECT e.name, d.department_name 
+FROM employees e 
+INNER JOIN departments d ON e.department_id = d.department_id;
+==========================================================================
+4. What is the difference between TRUNCATE, DELETE, and DROP?
+Answer:
+
+DELETE: Removes specific rows from a table. Can have a WHERE clause.
+Example: DELETE FROM employees WHERE id = 1;
+TRUNCATE: Removes all rows from a table without logging individual row deletions.
+Example: TRUNCATE TABLE employees;
+DROP: Removes the entire table (schema and data).
+Example: DROP TABLE employees;
+==========================================================================
+5. What is a primary key, foreign key, and unique key?
+Answer:
+
+Primary Key: Uniquely identifies a row in a table. Cannot contain null values.
+Example: CREATE TABLE employees (id INT PRIMARY KEY, name VARCHAR(100));
+
+Foreign Key: Establishes a relationship between two tables by referencing a primary key in another table.
+Example: CREATE TABLE orders (order_id INT, employee_id INT, FOREIGN KEY (employee_id) REFERENCES employees(id));
+
+Unique Key: Ensures all values in a column are unique. Allows one null value.
+Example: CREATE TABLE users (email VARCHAR(100) UNIQUE);
+==============================================================================

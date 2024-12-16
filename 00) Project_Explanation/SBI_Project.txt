@@ -1,0 +1,7 @@
+1)If i buy 10 shares in stock market ,how internally it will works
+2) which web server we are working
+3)which thing is challenging and how do you resolve it?
+4)What feature implementing on it?
+
+5)Which feature implementation done on linux device driver?
+6)Whats the hard thing u did debug?
