@@ -3,7 +3,13 @@ DSA Basics (part part logic ,equal code) (Comcast)
 (line working code + concept known)
 (Working code known)
 (dry run and get the code)
------------
+(break--logic + code)
+=========================
+break
+1)Topic choose (brute force,recursion,dp,map)
+2)full point solradhu (multiple topics-->rec,map)
+3)tell 10 points
+==============================
 1) Fundamentals-- use of digits,numbers
 2) Patterns-- iterate with loops and operators
 3) Arrays-- iteration with loops, hashtable, innbuilt functions

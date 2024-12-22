@@ -20,6 +20,8 @@ Topics (Market simplified)
 ======================================
 Link-Playlist Concept and Coding: https://youtu.be/rliSgjoOFTs?t=354&si=ErtWX4XXD6W_XZAQ
 
+HLD: https://youtu.be/blYkU8QfpEQ?si=lv-yegKFTiZKM6Z9
+
 Link Neetcode: https://neetcode.io/courses/system-design-for-beginners/3
 
 Practice Questions link: https://neetcode.io/courses/system-design-interview/3

@@ -6,7 +6,8 @@ Topics
 3)Linux
 4)Embedded
 5)Multithreading
-6)Coding (linked list and Bit masking)
+6)C++ Coding (linked list and Bit masking)
+7)Kernel programming
 ======================================
 1)AMI,Light Wonder
 C++&OOPS
