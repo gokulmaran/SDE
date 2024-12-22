@@ -39,3 +39,24 @@ int main() {
 
     return 0;
 }
+//virtual func 2
+#include <iostream>
+using namespace std;
+class A{
+    public:
+      virtual void display(){
+          cout<<"Base class executed"<<endl;
+      }
+};
+class B:public A{
+    public:
+      void display(){
+          cout<<"derived class executed"<<endl;
+      }
+};
+int main() {
+   A*baseptr;
+   B b;
+   baseptr=&b;
+   baseptr->display(); 
+}

@@ -1,6 +1,6 @@
 Topics
 ------------
-1)SQL QUeries
+1)SQL QUeries (Complete sql playlist: https://youtu.be/btZdKO17xOM?si=xAdy2PSVLiQ_4BmB)
   
 ====================
 
@@ -86,4 +86,30 @@ Example: CREATE TABLE orders (order_id INT, employee_id INT, FOREIGN KEY (employ
 
 Unique Key: Ensures all values in a column are unique. Allows one null value.
 Example: CREATE TABLE users (email VARCHAR(100) UNIQUE);
+==============================================================================
+6. Stored procedure vs Function
+====================================
+Stored Procedure: Performs a set of actions, such as updating or retrieving data, and can contain both queries and logic for database operations.
+Function: Primarily used to compute a value and return it. Functions are focused on returning a result.
+
+Stored Procedure Example:
+CREATE PROCEDURE GetEmployeeDetails(@DeptID INT)
+AS
+BEGIN
+    SELECT * FROM Employee WHERE DepartmentID = @DeptID;
+END;
+
+Execution:
+EXEC GetEmployeeDetails 1;
+
+Function 
+   CREATE FUNCTION GetEmployeeCount(@DeptID INT)
+RETURNS INT
+AS
+BEGIN
+    DECLARE @Count INT;
+    SELECT @Count = COUNT(*) FROM Employee WHERE DepartmentID = @DeptID;
+    RETURN @Count;
+END;
+SELECT dbo.GetEmployeeCount(1);
 ==============================================================================

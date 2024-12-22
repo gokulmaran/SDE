@@ -1,0 +1,47 @@
+Company wise
+
+Topics
+1)C Concepts
+2)C++ &OOPS
+3)Linux
+4)Embedded
+5)Multithreading
+6)Coding (linked list and Bit masking)
+======================================
+1)AMI,Light Wonder
+C++&OOPS
+Linux
+DBMS
+Embedded (UART,SIP,I2C)
+Codings Basics-DS
+1)Fundamentals
+2)Patterns
+3)Arrays
+4)Two pointer
+5)2D Arrays
+6)Character Arrays
+7)Strings
+8)Sorting
+9)Binary Search
+10)bitmasking
+11)linked list
+12)Stacks&Queues
+13)Heaps
+14)Hashmap&sets
+=================================================
+2) Philips
+1)DSA
+  1)Prefix sum
+2)Sliding window
+3) Number Theory
+4)Recursion
+5)Backtracking
+6)Linked list
+7) Trees(BT &BST)
+8) Trie
+9) Greedy
+10)Graphs
+11) DP-Memorization
+12)DP-tabulation
+2. LLD
+3. HLD

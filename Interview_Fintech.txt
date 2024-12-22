@@ -1,0 +1,9 @@
+Fintech
+---
+1)C++ (pointers(array,charac,func,class),STL(vector,list,mp),DMA(c&C++),template)
+2)OOPS(Constructor,shallow vs deep,destructor,polymorphism(vtable&vptr),abstraction)
+3)SQL queries (basic,Join,store vs function)
+4)Design patterns (singleton,factory,Strategy)
+5)Multithreading (read&write ,mutex)
+6)Coding(Socket programming,OOPS,linked list,Bit masking)
+================================================

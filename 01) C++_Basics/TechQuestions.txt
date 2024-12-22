@@ -414,3 +414,9 @@ Memory Allocation:
 Managed manually by the programmer.
 Used to store data that needs to persist for a longer duration or whose size is not known at compile-time (like dynamic arrays or objects created with new).
 ==========================================================
+19) Destructor vs virtual Destructor
+destructor
+If a base class pointer points to a derived class object, the base class destructor is called.
+virtual destructor
+Ensures proper destruction of both base and derived class objects in polymorphism scenarios.
+==========================================================
