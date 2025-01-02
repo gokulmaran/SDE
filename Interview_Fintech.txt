@@ -7,3 +7,24 @@ Fintech
 5)Multithreading (read&write ,mutex)
 6)Coding(Socket programming,OOPS,linked list,Bit masking)
 ================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=====================================
+HR-Salary Negotiation
+================================
+offer letter-- (25 lpa)
+===============================

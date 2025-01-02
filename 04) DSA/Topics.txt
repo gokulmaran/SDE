@@ -8,8 +8,43 @@ DSA Basics (part part logic ,equal code) (Comcast)
 break
 1)Topic choose (brute force,recursion,dp,map)
 2)full point solradhu (multiple topics-->rec,map)
-3)tell 10 points
-==============================
+3)tell 10 points (each point working known)
+4)Input to output (break-->full(map,vector,queue))
+5) solrathu == points->each points leads to another point->comments(full 10 points)
+=========================================
+Compnay wise topics
+
+HCL,light&wonder,AMI,Comcast
+1)Arrays
+2)2d arrays
+3)Strings
+4)character arrays
+5)Sorting
+6)bit masking
+7)linked list
+8)hashmap/sets
+9)heaps
+10)Two pointers
+=======================
+Zoho
+1)Recursion
+2)Backtracking
+3)prefix sum
+4)sliding window
+5)Number theory
+6)Binary search
+7)linked list
+8)stacks
+9)queues
+10)trees
+11)tries
+12)Greedy
+===========================
+Google ,amazon
+1)Graphs
+2)Dynamic programming
+3)String alogrithm
+===========================
 1) Fundamentals-- use of digits,numbers
 2) Patterns-- iterate with loops and operators
 3) Arrays-- iteration with loops, hashtable, innbuilt functions
@@ -40,3 +75,32 @@ DSA--Advanced
 12) Backtracking -- set condition , rec call, removal condition
 13) Graphs --  rec & iterate (visited ,dist array) on 2d arrays/list 
 ==============================
+DSA Updated
+--------------------
+Arrays & Hashing
+Patterns
+Two pointers
+Prefix sum
+2D array
+String
+Sliding window
+hashmap&Set
+Stack
+Queue
+Sorting
+Binary Search
+Recursion
+Linked List --> (pointers,dummy,slow and fast, vector,map,stack, recursion, list)
+Trees
+Heaps
+Backtracking
+Tries
+Graphs
+Advanced Graphs
+1D Dp(Memorization(recursion), Tabulation(store/save recursion), Space Optimization)
+2D Dp(Memorization(recursion), Tabulation(store/save recursion), Space Optimization)
+Greedy
+Intervals
+Math & Geometry
+Bit Manipulation
+==================================

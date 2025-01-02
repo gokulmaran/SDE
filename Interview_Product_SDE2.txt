@@ -1,8 +1,120 @@
 Topics
 -------
-1)DSA
+1)DSA 
 2)LLD
 3)HLD
 4)Tech subjects & behavioral
 5)Managerial
 ==========================
+Month--1
+Week 1-Arrays, Time Complexity Analysis
+Week 2-Strings , OOPS Basics FAQs
+Week 3- Hashing P2, Web App TechStack Workflow
+Week 4- Test on topics covered
+
+Month--2
+Week 1-Linked lists,Searching and sorting
+Week 2-Stacks & Queues,Greedy
+Week 3-Master Recursion and Trees, Computer fundamentals
+Week 4-Test on topics From Month 1 and Month 2
+
+Month--3
+Week 1-LCA,Tree Problems,Tries
+Week 2-Intro to DP,DP1
+Week 3-DP2,DP3
+Week 4-Test on topics covered so far
+
+Month--4
+Week 1-Graphs 1and 2
+Week 2-Final DSA Tests
+Week 3-LLD,Design Principles(SOLID)
+Week 4-Creational and Structural Design Pattern
+
+MOnth--5
+Week 1-Behavioral Design Patterns,UML Diagrams,Schema Design
+Week 2-Design Tic Tac Toe, Book my Show (Concurrency)
+Week 3-HLD Basics,Consistent Hashing,SQL vs NoSQL
+Week 4-HLD Caching,CAP Theorem,Master Slave Architecture
+==================================================================
+1)DSA (End thorough--Contest based)
+(Questions solve)
+Arrays & 2d arrays,
+Strings
+Linked list
+Trees
+Graphs
+
+Techniques: Recursion,Backtracking,Prefix sum,Sliding window,Number theory,
+Stacks,Queues,Greedy,Tries,Dynamic programming,Two pointers,Hashmap,Sets,Heaps,
+Sorting,Binary Search
+==================================================================
+SDE-II
+--------
+Arrays & Hashing
+Patterns
+Two pointers
+Prefix sum
+2D array
+String
+Sliding window
+hashmap&Set
+Stack
+Queue
+Sorting
+Binary Search
+Recursion
+Linked List --> (pointers,dummy,slow and fast, vector,map,stack, recursion, list)
+Trees
+Heaps
+Backtracking
+Tries
+Graphs
+Advanced Graphs
+1D Dp(Memorization(recursion), Tabulation(store recursion), Space Optimization)
+2D Dp(Memorization(recursion), Tabulation(store recursion), Space Optimization)
+Greedy
+Intervals
+Math & Geometry
+Bit Manipulation
+===================
+OOPS
+UML
+SOLID Principles
+Creational Design Pattern
+Structural Design Pattern
+Behavioral Design pattern
+Design Parking lot (sudo code)
+Design chess
+Design Elevator system
+=========================
+Distributed System
+Microservices Architecture
+CAP theorem
+Scalability and performance
+Proxies
+Load balancing
+Consistent hashing
+Caching
+Database Sharding
+SQL vs NoSQL
+Network protocols (HTTP,XMPP,websockets)
+long Polling, Web sockets, server sent events
+Replication
+Queues
+Understanding of DNS System
+Design Whatsapp
+Design TinyUrl
+Design Youtube
+Design Twitter
+====================================
+Behavioral Questions (STAR Pattern)
+OOPS 
+DBMS
+OS
+CN 
+Data Structures
+=====================================
+HR-Salary Negotiation
+================================
+offer letter-- (25 lpa)
+===============================

@@ -6,7 +6,7 @@ Topics
 3)Linux
 4)Embedded
 5)Multithreading
-6)C++ Coding (linked list and Bit masking)
+6)C++ Coding (OOPS, linked list and Bit masking)
 7)Kernel programming
 ======================================
 1)AMI,Light Wonder
@@ -19,30 +19,110 @@ Codings Basics-DS
 2)Patterns
 3)Arrays
 4)Two pointer
-5)2D Arrays
-6)Character Arrays
-7)Strings
-8)Sorting
-9)Binary Search
-10)bitmasking
-11)linked list
-12)Stacks&Queues
-13)Heaps
-14)Hashmap&sets
+5)Prefix sum
+6)2D Arrays
+7)Character Arrays
+8)Strings
+9)Sliding window
+10)Sorting
+11)Binary Search
+12)bitmasking
+13)linked list
+14)Stacks&Queues
+15)Heaps
+16)Hashmap&sets
+17) Number Theory
 =================================================
 2) Philips
 1)DSA
-  1)Prefix sum
-2)Sliding window
-3) Number Theory
-4)Recursion
-5)Backtracking
-6)Linked list
-7) Trees(BT &BST)
-8) Trie
-9) Greedy
-10)Graphs
-11) DP-Memorization
-12)DP-tabulation
+1) Recursion
+2) Backtracking
+3) Linked list
+4) Trees(BT &BST)
+5) Trie
+6) Greedy
+7) Graphs
+8) Advanced Graphs
+9) DP-Memorization
+10)DP-tabulation
+==============================================
 2. LLD
 3. HLD
+========================
+
+AMI
+Technical Questions
+=====================
+C++
+---
+1) Diff between virtual table and virtual pointer
+2) how abstraction can be achieved?
+3) how run time polymorphism can be achieved?
+5) templates in c++
+6) Polymorphism (compile time and runtime)
+7) vector vs list difference
+8) pointers(new vs malloc, dangling pointer, void pointer,function pointer, character pointer, array pointer) 
+9) what is smart pointers and explain it types
+10) types of polymorphism , explain with Example
+11) shallow copy vs deep copy
+12) call by value vs call by reference
+13) destructor vs virtual Destructor
+14) What is called memory leak
+15) stack vs heap (storage wise difference)
+16) what is called virtual function?
+
+Linux
+-----
+1) Difference between static linking and dynamic linking
+2) Difference between soft link and hard link
+3) how to create a process
+4) IPC mechanism and it types
+5) linux used commands
+6) which command used to kill the process
+7) which command used for check the process is in running or not
+8) how program compilation works internally (preprocessor, assembler,linker,compiler)
+9) what is mutex , which way helpful
+10) what is thread concept ,which way helpful
+
+Coding
+==========
+0. C concept Coding
+  -traverse the character array using pointer
+  -syntax for function pointer
+
+1.OOPS
+  1.Implementation of smart pointers
+  2.Implementation of String class
+  3.Shallow copy vs deep copy
+
+2. Arrays
+   -Merge 2 sorted arrays
+
+3.String
+  1.Reverse each word in a string
+
+4.Linked List (Creation need to be clear)
+  1.Reverse a Linked List
+  2.delete a middle node of LInkedList
+  3.Merge 2 lists into a single list
+  4.find a cycle in a linked list
+
+5.Bit masking
+  1.calculate set bits in a number
+  2.swap nibbles
+
+6.Socket programming
+
+7.Multi threading 
+    -->Implementation read and write program using thread 
+    -->Implementation thread vs mutex
+
+Additional Questions
+=====================
+   --Explain a feature you implemented in the project.
+   --Describe a challenging aspect in the project and how you resolved it.
+=============================================================================
+HR-Salary Negotiation
+================================
+offer letter-- (25 lpa)
+===============================
