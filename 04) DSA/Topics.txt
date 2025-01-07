@@ -75,7 +75,7 @@ DSA--Advanced
 12) Backtracking -- set condition , rec call, removal condition
 13) Graphs --  rec & iterate (visited ,dist array) on 2d arrays/list 
 ==============================
-DSA Updated
+DSA Updated  (with concept clear)
 --------------------
 Arrays & Hashing
 Patterns
@@ -97,10 +97,36 @@ Backtracking
 Tries
 Graphs
 Advanced Graphs
-1D Dp(Memorization(recursion), Tabulation(store/save recursion), Space Optimization)
-2D Dp(Memorization(recursion), Tabulation(store/save recursion), Space Optimization)
+1D Dp(Memorization(recursion), Tabulation(store/save recursion), Space Optimization(different states store in variable/vector))
+2D Dp(Memorization(recursion), Tabulation(store/save recursion), Space Optimization(different states store in variable/vector))
 Greedy
 Intervals
 Math & Geometry
 Bit Manipulation
 ==================================
+Ordered
+Arrays
+2D array
+Strings
+Hashmap/set
+Two pointer
+Prefix sum
+Sliding window
+Sorting
+Binary search
+Stack 
+Queue
+Heap
+Greedy & Interval
+Bit mask 
+Number theory
+
+Recursion
+Backtracking
+Linked list
+Trees
+Tries
+Graphs
+1D-DP
+2D-DP
+=====================================
